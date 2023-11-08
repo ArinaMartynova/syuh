@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Форма </title>
+    
+    <style>
+        body {            
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        form { 
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top:100px;
+        }
+
+        label {
+            display: block;
+            color:#a1a1a1;
+            margin-bottom: 10px;
+        }
+
+        .left {
+            float:left;
+            margin-right:15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="lastname"], input[type="password"], select {
+            padding: 5px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            margin-bottom: 10px;
+            width:350px;
+        }
+
+        input[type="checkbox"] {
+            margin: 7px;
+        }
+
+        .btn {
+            background: #F9D9BE;
+            color: #000;
+            height: 45px;
+            width: 130px;
+            border:none;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h2> PERSONAL INFORMATION </h2>
+    <div class="left">
+        <label for="name">FIRST NAME*</label>
+        <input type="text" id="name" name="name" required placeholder="Введите имя">
+    </div>
+    
+    <div class="left">
+        <label for="lastname">LAST NAME* </label>
+        <input type="text" id="lastname" name="lastname" required placeholder="Введите фамилию">
+    </div>
+    
+    <label for="email">EMAIL ADDRESS*</label>
+    <input type="email" id="email" name="email" required placeholder="Введите почту">
+    
+    <label for="checkbox"><input type="checkbox" id="checkbox" required> SIGN UP FOR NEWSLETTER</label>
+
+    <h2> LOGIN INFORMATION</h2>
+    
+    <div class="left">
+        <label for="pass">PASSWORD<span class="req">*</span> </label>
+        <input type="password" id="pass" name="pass" required autocomplete="off" placeholder="Введите пароль">
+    </div>
+    
+    <div>
+        <label for="confirm_pass">CONFIRM PASSWORD<span class="req">*</span> </label>
+        <input type="password" id="confirm_pass" name="confirm_pass" required autocomplete="off" placeholder="Подтвердите пароль">
+    </div>
+
+    <br>
+    <button class="btn"> SUBMIT </button>
+</form>
+
+
+</body>
+</html>
